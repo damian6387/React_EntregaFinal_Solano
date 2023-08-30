@@ -37,6 +37,41 @@
   }
 }
 
-.navStyle {
-  background-color: burlywood;
+body {
+  background-color: whitesmoke;
+}
+
+.cartStyle {
+  display: flex;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  color: white;
+}
+
+.logoStyle {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.iconStyle {
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+.linkStyle {
+  font-size: 1.2rem;
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.cardStyle {
+  margin: 18px;
+}
+
+.imageCard {
+  height: 25rem;
 }

@@ -1,10 +1,12 @@
-export const CartWidget = () => {
+import cart from "../assets/cart_white.png";
+
+const CartWidget = () => {
   return (
-    <div>
-      <span className="material-icons" alt="shopping-cart-icon">
-        shopping_cart
-      </span>
-      0
+    <div className="cartStyle">
+      <img src={cart} alt="carrito" />
+      <span>0</span>
     </div>
   );
 };
+
+export default CartWidget;
