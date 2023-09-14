@@ -75,3 +75,20 @@ body {
 .imageCard {
   height: 25rem;
 }
+
+.footerStyle {
+  margin-top: 20px;
+  height: 10rem;
+  background-color: black;
+  display: grid;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footerStyleText {
+  color: white;
+}
+
+.buttonStyle{
+  
+}

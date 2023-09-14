@@ -31,41 +31,6 @@ const NavBar = () => {
         </Container>
       </Navbar>
     </header>
-
-    /*<nav>
-      <div className="navStyle">
-        <h1>The Green Corner</h1>
-        <Link to="/">
-          <img src={icon} alt="logo" className="iconStyle"></img>
-        </Link>
-        <div>
-          <ul>
-            <li>
-              <Link to="/" className="linkStyle">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/productos/cafeteria" className="linkStyle">
-                Coffee Shop
-              </Link>
-            </li>
-            <li>
-              <Link to="/productos/plantas" className="linkStyle">
-                Plants Shop
-              </Link>
-            </li>
-            <li>
-              <Link to={"/nosotros"} className="linkStyle">
-                Nosotros
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <CartWidget />
-      </div>
-    </nav>*/
   );
 };
 
