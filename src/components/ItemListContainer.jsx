@@ -11,11 +11,6 @@ const ItemListContainer = () => {
 
   //Cambio del estado del producto
   useEffect(() => {
-    /*
-    pedirProductos().then((res) => {
-      setProductos(res);
-    });
-    */
     //Fetch para traer los datos de Mockapi con agregado de filtro por categoria
     fetch("https://64e8fe2899cf45b15fe063ea.mockapi.io/api/cafeteria/opciones")
       .then((res) => {

@@ -27,7 +27,9 @@ const NavBar = () => {
               Plants Shop
             </Link>
           </Nav>
-          <CartWidget />
+          <CartWidget>
+            <Link to="/cart"></Link>
+          </CartWidget>
         </Container>
       </Navbar>
     </header>

@@ -1,18 +1,17 @@
 import Card from "react-bootstrap/Card";
-//import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import ItemCount from "./ItemCount";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({ item }) => {
-  const { carrito } = useContext(CartContext);
+  const { carrito, agregarAlCarrito } = useContext(CartContext); //Consumo los datos de carrito
   console.log(carrito);
 
   const [cantidad, setCantidad] = useState(1);
 
   useEffect(() => {
-    return console.log(cantidad);
+    //return console.log(cantidad);
   }, [cantidad]);
 
   const handleSumar = () => {
@@ -21,10 +20,6 @@ const ItemDetail = ({ item }) => {
 
   const handleBorrar = () => {
     cantidad > 0 && setCantidad(cantidad - 1);
-  };
-
-  const handleAgregar = () => {
-    console.log({ ...item, cantidad });
   };
 
   return (
@@ -42,7 +37,9 @@ const ItemDetail = ({ item }) => {
               cantidad={cantidad}
               handleSumar={handleSumar}
               handleBorrar={handleBorrar}
-              handleAgregar={handleAgregar}
+              handleAgregar={() => {
+                agregarAlCarrito(item, cantidad); //Pasas los parametros
+              }}
             />
           </Card.Body>
         </Card>

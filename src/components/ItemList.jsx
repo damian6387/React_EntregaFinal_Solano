@@ -7,20 +7,10 @@ const ItemList = ({ productos }) => {
       {productos.length > 0 &&
         productos.map((producto) => {
           //Key para identificar los elementos del array
-          return <Item key={producto.id} producto={producto} />;
+          return <Item key={producto.id} producto={producto} />;  //Retornas a Item cada uno de los productos
         })}
     </Container>
   );
 };
 
 export default ItemList;
-
-/*
-<div style={{ display: "flex", flexWrap: "wrap" }}>
-        {productos.length > 0 &&
-          productos.map((producto) => {
-            //Key para identificar los elementos del array
-            return <Item key={producto.id} producto={producto} />;
-          })}
-      </div>
-*/
