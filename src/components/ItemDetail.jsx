@@ -1,5 +1,5 @@
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
+//import Card from "react-bootstrap/Card";
+//import Container from "react-bootstrap/Container";
 import ItemCount from "./ItemCount";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
@@ -23,28 +23,43 @@ const ItemDetail = ({ item }) => {
   };
 
   return (
-    <div>
+    <div className="cardStyle">
+      <img className="imageCardStyle" src={item.image} alt="" />
+      <div className="textCardStyle">
+        <h2>{item.title}</h2>
+        <p>{item.description}</p>
+        <ItemCount
+          cantidad={cantidad}
+          handleSumar={handleSumar}
+          handleBorrar={handleBorrar}
+          handleAgregar={() => {
+            agregarAlCarrito(item, cantidad); //Pasas los parametros
+          }}
+        />
+      </div>
+    </div>
+
+    /*<div>
       <Container>
         <Card style={{ width: "18rem" }} className="cardStyle">
           <Card.Img variant="top" src={item.image} />
           <Card.Body>
-            <Card.Title>{item.title}</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <ItemCount
-              cantidad={cantidad}
-              handleSumar={handleSumar}
-              handleBorrar={handleBorrar}
-              handleAgregar={() => {
-                agregarAlCarrito(item, cantidad); //Pasas los parametros
-              }}
-            />
+            <div className="textCardStyle">
+              <Card.Title>{item.title}</Card.Title>
+              <Card.Text>{item.description}</Card.Text>
+              <ItemCount
+                cantidad={cantidad}
+                handleSumar={handleSumar}
+                handleBorrar={handleBorrar}
+                handleAgregar={() => {
+                  agregarAlCarrito(item, cantidad); //Pasas los parametros
+                }}
+              />
+            </div>
           </Card.Body>
         </Card>
       </Container>
-    </div>
+    </div>*/
   );
 };
 

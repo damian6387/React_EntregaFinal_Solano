@@ -70,10 +70,19 @@ body {
 
 .cardStyle {
   margin: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.imageCard {
-  height: 25rem;
+.textCardStyle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.imageCardStyle {
+  height: 30rem;
 }
 
 .footerStyle {
@@ -89,6 +98,18 @@ body {
   color: white;
 }
 
-/*.buttonStyle{
-  
-}*/
+.buttonStyle {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.buttonsOrder {
+  display: flex;
+  align-items: center;
+}
+
+.numberQuantityStyle {
+  margin-left: 5px;
+  margin-right: 5px;
+}

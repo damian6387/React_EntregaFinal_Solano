@@ -8,8 +8,6 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState(null); //null para que no muestre nada al principio
   const itemId = useParams().id;
 
-  //console.log(itemId);
-
   useEffect(() => {
     const docRef = doc(db, "productos", itemId);
 

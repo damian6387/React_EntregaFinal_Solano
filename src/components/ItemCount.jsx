@@ -1,14 +1,16 @@
 const ItemCount = ({ cantidad, handleSumar, handleBorrar, handleAgregar }) => {
   return (
-    <div>
+    <div className="buttonsOrder">
       <button className="buttonStyle" onClick={handleSumar}>
         +
       </button>
-      {cantidad}
+      <div className="numberQuantityStyle">{cantidad}</div>
       <button className="buttonStyle" onClick={handleBorrar}>
         -
       </button>
-      <button onClick={handleAgregar}>Agregar al carrito</button>
+      <button className="buttonCartStyle" onClick={handleAgregar}>
+        Agregar al carrito
+      </button>
     </div>
   );
 };
