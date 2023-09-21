@@ -41,12 +41,9 @@ body {
   background-color: whitesmoke;
 }
 
-.cartStyle {
-  display: flex;
-  align-items: center;
-  width: 35px;
-  height: 35px;
-  color: white;
+/*---------------------------NAVBAR-------------------*/
+.NavBarStyle {
+  background-color: black;
 }
 
 .logoStyle {
@@ -61,30 +58,122 @@ body {
   margin-right: 20px;
 }
 
+.cartStyle {
+  width: 35px;
+  height: 35px;
+  color: white;
+  margin-right: 10px;
+}
+
+.elementsCartStyle {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
 .linkStyle {
+  display: flex;
   font-size: 1.2rem;
-  margin-left: 15px;
+  margin-left: 20px;
   text-decoration: none;
   color: white;
 }
 
-.cardStyle {
-  margin: 18px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.numberCartStyle {
+  color: white;
+  text-decoration: none underline;
 }
+/*-------------------------------------------------------*/
 
-.textCardStyle {
+/*---------------------ESTILO CARDS-----------------------*/
+.cardStyle {
   display: flex;
-  flex-direction: column;
-  margin-left: 2rem;
+  align-items: center;
+  margin: 18px;
 }
 
 .imageCardStyle {
   height: 30rem;
 }
 
+.textCardStyle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cardItemStyle {
+  margin: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/*-------------------------------------------------------*/
+
+/*-----------------ESTILO CARDS DETAIL-------------------*/
+.imageStyle {
+  /*height: 40rem;
+  width: 25rem;*/
+  width: 25%;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.numberQuantityStyle {
+  margin-left: 5px;
+  margin-right: 5px;
+  /*font-weight: bold;*/
+  font-size: large;
+}
+
+.textDetailStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3rem;
+}
+/*-------------------------------------------------------*/
+
+/*----------------------BOTONES-------------------------*/
+.buttonStyle {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #0d6efd;
+  color: white;
+  border-style: solid;
+  border-color: #0d6efd;
+}
+
+.buttonsOrder {
+  display: flex;
+  align-items: center;
+}
+
+.buttonCartStyle {
+  border-radius: 5px;
+  height: 35px;
+  margin-left: 30px;
+  background-color: #0d6efd;
+  color: white;
+  border-style: solid;
+  border-color: #0d6efd;
+}
+/*-------------------------------------------------------*/
+
+/*-----------------------CART----------------------------*/
+.cartDetailStyle {
+  margin-top: 20px;
+}
+
+.textCartStyle {
+  size: 1rem;
+}
+/*-------------------------------------------------------*/
+
+/*-----------------------FOOTER--------------------------*/
 .footerStyle {
   margin-top: 20px;
   height: 10rem;
@@ -97,19 +186,4 @@ body {
 .footerStyleText {
   color: white;
 }
-
-.buttonStyle {
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
-}
-
-.buttonsOrder {
-  display: flex;
-  align-items: center;
-}
-
-.numberQuantityStyle {
-  margin-left: 5px;
-  margin-right: 5px;
-}
+/*------------------------------------------------------*/

@@ -23,9 +23,9 @@ const ItemDetail = ({ item }) => {
   };
 
   return (
-    <div className="cardStyle">
-      <img className="imageCardStyle" src={item.image} alt="" />
-      <div className="textCardStyle">
+    <div className="cardItemStyle">
+      <img className="imageStyle" src={item.image} alt="" />
+      <div className="textDetailStyle">
         <h2>{item.title}</h2>
         <p>{item.description}</p>
         <ItemCount

@@ -1,29 +1,36 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 
 const Cart = () => {
   const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext); //Consumo los datos de carrito
   return (
-    <div>
+    <Container className="cartDetailStyle">
       {carrito.length > 0 &&
         carrito.map((producto) => (
           <div key={producto.id}>
-            <h4>{producto.title}</h4>
-            <p>Cantidad:{producto.cantidad}</p>
-            <p>Precio unitario:${producto.price}</p>
-            <p>Precio total:${producto.price * producto.cantidad}</p>
+            <h5>{producto.title}</h5>
+            <div className="textCartStyle ">
+              <p>Cantidad: {producto.cantidad}</p>
+              <p>Precio unitario: ${producto.price}</p>
+              <p>Precio total: ${producto.price * producto.cantidad}</p>
+            </div>
           </div>
         ))}
       {carrito.length > 0 ? (
         <>
-          <h2>Precio Total:${precioTotal()}</h2>
-          <button onClick={vaciarCarrito}>Vaciar Carrito</button>
-          <button>Comprar Carrito</button>
+          <br></br>
+          <h3>Precio Total:${precioTotal()}</h3>
+          <Button variant="link" onClick={vaciarCarrito}>
+            Vaciar Carrito
+          </Button>
+          <Button variant="link">Comprar Carrito</Button>
         </>
       ) : (
-        <h2>Tu carrito esta vacio</h2>
+        <h3>Tu carrito esta vacio :(</h3>
       )}
-    </div>
+    </Container>
   );
 };
 
