@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
     setCarrito(nuevoCarrito);
   };
 
-  //La defino para visualizar la cantidad de productos hay en el carrito
+  //La defino para visualizar la cantidad de productos que hay en el carrito
   const cantidadEnCarrito = () => {
     return carrito.reduce((acum, prod) => acum + prod.cantidad, 0);
   };
@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
   }, [carrito]);
 
   return (
-    //Proveo del array carrito y de la funcion agregar AlCarrito
+    //Proveo del array carrito, de la funcion agregar AlCarrito, etc
     <CartContext.Provider
       value={{
         carrito,

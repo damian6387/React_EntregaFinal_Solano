@@ -14,20 +14,6 @@ const ItemDetailContainer = () => {
     getDoc(docRef).then((resp) => {
       setItem({ ...resp.data(), id: resp.id });
     });
-    /*if (itemId) {
-      fetch(
-        "https://64e8fe2899cf45b15fe063ea.mockapi.io/api/cafeteria/opciones"
-      )
-        .then((res) => {
-          return res.json(); //Se captura la info en formato json
-        })
-        .then((data) => {
-          //Se transforma la data para que sea legible y con setProductos accedes a la misma
-          //Y busco el producto en la base de datos que cumpla con el id ingresado
-          const itemFound = data.find((elemento) => elemento.id === itemId);
-          setItem(itemFound);
-        });
-    }*/
   }, [itemId]);
 
   return <div>{item && <ItemDetail item={item} />}</div>;

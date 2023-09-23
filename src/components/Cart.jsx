@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext); //Consumo los datos de carrito
@@ -25,7 +26,7 @@ const Cart = () => {
           <Button variant="link" onClick={vaciarCarrito}>
             Vaciar Carrito
           </Button>
-          <Button variant="link">Comprar Carrito</Button>
+          <Link to="/checkout">Comprar Carrito</Link>
         </>
       ) : (
         <h3>Tu carrito esta vacio :(</h3>

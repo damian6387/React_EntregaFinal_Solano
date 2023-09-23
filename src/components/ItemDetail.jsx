@@ -23,7 +23,7 @@ const ItemDetail = ({ item }) => {
   };
 
   return (
-    <div className="cardItemStyle">
+    <div className="cardItemStyle container">
       <img className="imageStyle" src={item.image} alt="" />
       <div className="textDetailStyle">
         <h2>{item.title}</h2>
@@ -38,28 +38,6 @@ const ItemDetail = ({ item }) => {
         />
       </div>
     </div>
-
-    /*<div>
-      <Container>
-        <Card style={{ width: "18rem" }} className="cardStyle">
-          <Card.Img variant="top" src={item.image} />
-          <Card.Body>
-            <div className="textCardStyle">
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text>{item.description}</Card.Text>
-              <ItemCount
-                cantidad={cantidad}
-                handleSumar={handleSumar}
-                handleBorrar={handleBorrar}
-                handleAgregar={() => {
-                  agregarAlCarrito(item, cantidad); //Pasas los parametros
-                }}
-              />
-            </div>
-          </Card.Body>
-        </Card>
-      </Container>
-    </div>*/
   );
 };
 
