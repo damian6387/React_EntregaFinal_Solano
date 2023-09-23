@@ -3,6 +3,7 @@
 import ItemCount from "./ItemCount";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
+import { Container } from "react-bootstrap";
 
 const ItemDetail = ({ item }) => {
   const { carrito, agregarAlCarrito } = useContext(CartContext); //Consumo los datos de carrito
@@ -23,21 +24,23 @@ const ItemDetail = ({ item }) => {
   };
 
   return (
-    <div className="cardItemStyle container">
-      <img className="imageStyle" src={item.image} alt="" />
-      <div className="textDetailStyle">
-        <h2>{item.title}</h2>
-        <p>{item.description}</p>
-        <ItemCount
-          cantidad={cantidad}
-          handleSumar={handleSumar}
-          handleBorrar={handleBorrar}
-          handleAgregar={() => {
-            agregarAlCarrito(item, cantidad); //Pasas los parametros
-          }}
-        />
+    <Container>
+      <div className="cardItemStyle">
+        <img className="imageStyle" src={item.image} alt="" />
+        <div className="textDetailStyle">
+          <h2>{item.title}</h2>
+          <p>{item.description}</p>
+          <ItemCount
+            cantidad={cantidad}
+            handleSumar={handleSumar}
+            handleBorrar={handleBorrar}
+            handleAgregar={() => {
+              agregarAlCarrito(item, cantidad); //Pasas los parametros
+            }}
+          />
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

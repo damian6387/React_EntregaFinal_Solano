@@ -1,8 +1,15 @@
 body {
-  background-color: whitesmoke;
+  min-height: 100vh;
+  background: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6)),
+    url(./assets/van-thanh-ZySumdV9rpw-unsplash-fotor-20230923161557.jpg)
+      no-repeat center center fixed;
+  background-size: cover;
 }
 
 /*---------------------------NAVBAR-------------------*/
+.navBarStyle {
+  background: rgba(5, 7, 12, 0.5);
+}
 
 .logoStyle {
   display: flex;
@@ -11,8 +18,8 @@ body {
 }
 
 .iconStyle {
-  width: 90px;
-  height: 90px;
+  width: 75px;
+  height: 75px;
   margin-right: 20px;
 }
 
@@ -24,9 +31,26 @@ body {
 }
 
 .elementsCartStyle {
-  display: flex;
+  display: grid;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   text-decoration: none;
+  width: 4rem;
+  height: 2.5rem;
+  background-color: #198754;
+  border-radius: 6px;
+}
+
+.elementsCartStyle:hover {
+  background-color: #157a4b;
+}
+
+.number-cart-style {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 5px;
 }
 
 .linkStyle {
@@ -37,50 +61,55 @@ body {
   color: white;
 }
 
-.numberCartStyle {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
 /*-------------------------------------------------------*/
 
 /*---------------------ESTILO CARDS-----------------------*/
 .cardStyle {
   display: flex;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 20px;
+  border: none;
   margin: 18px;
+  background: rgba(5, 7, 12, 0);
 }
 
 .imageCardStyle {
   height: 30rem;
+  border-radius: 20px;
 }
 
 .textCardStyle {
   display: flex;
   flex-direction: column;
   text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.title-card-style {
+  font-size: 1.5rem;
 }
 
 /*-------------------------------------------------------*/
 
-/*-----------------ESTILO CARDS DETAIL-------------------*/
+/*-----------------ESTILO DETAIL-------------------*/
 .imageStyle {
   /*height: 40rem;
   width: 25rem;*/
   width: 25rem;
   height: 40rem;
-  border-radius: 6px;
-
+  border-radius: 25px;
   margin-right: 20px;
 }
 
 .cardItemStyle {
-  margin: 50px;
+  margin: 70px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .numberQuantityStyle {
@@ -95,6 +124,12 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-left: 3rem;
+  width: 35rem;
+}
+
+.button-text-comprar {
+  color: white;
+  text-decoration: none;
 }
 /*-------------------------------------------------------*/
 
@@ -104,10 +139,14 @@ body {
   height: 35px;
   border-radius: 5px;
   font-size: 20px;
-  background-color: #0d6efd;
+  background-color: #198754;
   color: white;
   border-style: solid;
-  border-color: #0d6efd;
+  border-color: #198754;
+}
+
+.buttonStyle:hover {
+  background-color: #157a4b;
 }
 
 .buttonsOrder {
@@ -115,23 +154,84 @@ body {
   align-items: center;
 }
 
-.buttonCartStyle {
+.button-agregar-style {
   border-radius: 5px;
   height: 35px;
   margin-left: 30px;
-  background-color: #0d6efd;
+  background-color: #198754;
   color: white;
   border-style: solid;
-  border-color: #0d6efd;
+  border-color: #198754;
 }
+
+.button-agregar-style:hover {
+  background-color: #157a4b;
+}
+
 /*-------------------------------------------------------*/
 
 /*-----------------------CART----------------------------*/
 .cartDetailStyle {
   margin-top: 20px;
+  color: white;
 }
 
 .textCartStyle {
-  size: 1rem;
+  font-size: 1.2rem;
+}
+
+.link-vaciar-style {
+  margin-right: 15px;
+}
+/*-------------------------------------------------------*/
+
+/*-----------------------FORMULARIO----------------------*/
+.titleStyle {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.formularioStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputsStyle {
+  margin: 12px;
+  border-radius: 8px;
+  width: 20rem;
+  height: 2.5rem;
+}
+
+.button-comprar-style {
+  border-radius: 5px;
+  height: 35px;
+  background-color: #198754;
+  color: white;
+  border-style: solid;
+  border-color: #198754;
+  margin-top: 10px;
+}
+
+.button-comprar-style:hover {
+  background-color: #157a4b;
+}
+
+/*-------------------------------------------------------*/
+
+/*---------------------OTROS-----------------------------*/
+.containerStyle {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.compra-confirmada {
+  display: grid;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
 }
 /*-------------------------------------------------------*/

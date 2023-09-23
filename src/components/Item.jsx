@@ -12,10 +12,10 @@ const Item = ({ producto }) => {
           className="imageCardStyle"
         />
         <Card.Body className="textCardStyle">
-          <Card.Title>{producto.title}</Card.Title>
+          <Card.Title className="title-card-style">{producto.title}</Card.Title>
           <Card.Text>${producto.price}</Card.Text>
           <Link to={`/item/${producto.id}`}>
-            <Button variant="primary">Ver mas</Button>
+            <Button variant="success">Ver mas</Button>
           </Link>
         </Card.Body>
       </Card>

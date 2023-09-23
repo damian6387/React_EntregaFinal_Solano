@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import icon from "../assets/icon.png";
-
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -10,7 +9,7 @@ import Navbar from "react-bootstrap/Navbar";
 const NavBar = () => {
   return (
     <header>
-      <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar data-bs-theme="dark" className="navBarStyle">
         <Container>
           <Navbar.Brand href="#" className="logoStyle">
             <img src={icon} alt="logo" className="iconStyle"></img>
@@ -28,7 +27,7 @@ const NavBar = () => {
             </Link>
           </Nav>
           <CartWidget>
-            <Link to="/cart"></Link>
+            <Link to="/cart" className="number-cart-style"></Link>
           </CartWidget>
         </Container>
       </Navbar>
